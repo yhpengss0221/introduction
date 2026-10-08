@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f2ec;color:#16202e;font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all}
+a{color:#16202e;text-decoration:none}
+a:hover{color:#b4532a}
+*{box-sizing:border-box}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#f5f2ec">
+
+<header style="position:sticky;top:0;z-index:10;background:rgba(245,242,236,0.92);backdrop-filter:blur(8px);border-bottom:1px solid #ddd6ca">
+  <div style="max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <a href="#top" style="font-family:'Noto Serif KR',serif;font-weight:700;font-size:18px;letter-spacing:-0.01em">박웅희 <span style="font-family:Pretendard Variable,sans-serif;font-weight:500;font-size:13px;color:#5b6573;margin-left:6px">수석전문위원</span></a>
+    <nav style="display:flex;gap:24px;flex-wrap:wrap;font-size:14px;font-weight:500">
+      <a href="#about">소개</a>
+      <a href="#expertise">전문분야</a>
+      <a href="#programs">실적</a>
+      <a href="#career">경력·자격</a>
+      <a href="#contact" style="color:#b4532a">문의하기</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" style="max-width:1200px;margin:0 auto;padding:clamp(48px,8vw,104px) 24px clamp(56px,8vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,80px);align-items:end">
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;letter-spacing:0.06em;color:#b4532a">
+      <span style="width:32px;height:1px;background:#b4532a"></span>한국표준협회 품질신뢰성혁신센터
+    </div>
+    <h1 style="margin:0;font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(38px,5.6vw,68px);line-height:1.18;letter-spacing:-0.03em;text-wrap:balance">현장의 문제를<br>데이터와 표준으로<br><span style="color:#b4532a">해결합니다.</span></h1>
+    <p style="margin:0;max-width:540px;font-size:clamp(16px,1.5vw,18px);line-height:1.8;color:#3b4554;text-wrap:pretty">삼성전자에서 개발·현장·경영혁신을 거쳐, 2006년부터 한국표준협회에서 6시그마와 품질경영, 문제해결 교육 및 컨설팅을 수행하고 있습니다. 정부기관과 기업이 스스로 개선을 이어갈 수 있는 역량을 남기는 것을 목표로 합니다.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="#contact" style="padding:15px 26px;background:#16202e;color:#f5f2ec;font-weight:600;font-size:15px;border-radius:2px" style-hover="background:#b4532a;color:#fff">교육·컨설팅 문의</a>
+      <a href="#programs" style="padding:15px 26px;border:1px solid #16202e;font-weight:600;font-size:15px;border-radius:2px" style-hover="background:#16202e;color:#f5f2ec">주요 실적 보기</a>
+    </div>
+  </div>
+  <sc-if value="{{ showPhoto }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative;max-width:380px;width:100%;justify-self:end">
+      <div style="position:absolute;inset:20px -20px -20px 20px;border:1px solid #b4532a"></div>
+      <div style="position:relative;aspect-ratio:4/5;background:#e6e0d4">
+        <image-slot id="profile-photo" shape="rect" src="assets/profile.png" placeholder="프로필 사진을 끌어다 놓으세요"></image-slot>
+      </div>
+    </div>
+  </sc-if>
+</section>
+
+<section id="about" style="background:#16202e;color:#f5f2ec">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px;display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,80px)">
+    <div style="display:flex;flex-direction:column;gap:12px;flex:1 1 300px;min-width:0">
+      <span style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#e08a5f">01 — ABOUT</span>
+      <h2 style="margin:0;font-family:'Noto Serif KR',serif;font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.35;letter-spacing:-0.02em">조직이든 개인이든<br>창조성이 살길입니다</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;font-size:17px;line-height:1.85;color:#c9cfd8;flex:2 1 400px;min-width:0;text-wrap:pretty">
+      <p style="margin:0">안녕하십니까, 한국표준협회 품질신뢰성혁신센터 수석전문위원 박웅희입니다. 삼성전자 사업부에서 개발·필드 엔지니어·세일즈 엔지니어로, 본사 경영혁신팀에서 혁신기획·6시그마·사무혁신 업무를 맡았습니다.</p>
+      <p style="margin:0">이후 한국표준협회에서 국방부, LG이노텍, 에스엘, LS일렉트릭 등 공공기관과 기업의 6시그마 인력 양성과 품질혁신 컨설팅을 수행해 왔습니다. 사실과 데이터에 근거해 원인을 찾고, 창의적인 해결과 표준화로 성과를 유지하도록 돕는 것이 제가 일하는 방식입니다.</p>
+    </div>
+  </div>
+</section>
+
+<section id="expertise" style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px">
+  <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:48px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#b4532a">02 — EXPERTISE</span>
+    <h2 style="margin:0;font-family:'Noto Serif KR',serif;font-weight:700;font-size:clamp(28px,3.4vw,40px);letter-spacing:-0.02em">강의 및 지도 전문분야</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));column-gap:32px;border-top:2px solid #16202e">
+    <sc-for list="{{ expertise }}" as="e" hint-placeholder-count="5">
+      <div style="padding:32px 0 36px;border-bottom:1px solid #ddd6ca;display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:'Noto Serif KR',serif;font-size:15px;color:#b4532a;font-weight:700">{{ e.no }}</span>
+        <h3 style="margin:0;font-size:22px;font-weight:700;letter-spacing:-0.02em">{{ e.title }}</h3>
+        <p style="margin:0;font-size:15px;line-height:1.75;color:#4a5462;text-wrap:pretty">{{ e.desc }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">
+          <sc-for list="{{ e.tags }}" as="t" hint-placeholder-count="3">
+            <span style="font-size:12px;font-weight:500;padding:4px 10px;border:1px solid #cfc6b6;color:#3b4554;border-radius:20px">{{ t }}</span>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="programs" style="background:#ebe5da">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#b4532a">03 — TRACK RECORD</span>
+        <h2 style="margin:0;font-family:'Noto Serif KR',serif;font-weight:700;font-size:clamp(28px,3.4vw,40px);letter-spacing:-0.02em">분야별 주요 실적</h2>
+      </div>
+      <div style="display:flex;border:1px solid #16202e;border-radius:2px;overflow:hidden;flex-wrap:wrap">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+          <button onClick="{{ t.pick }}" style="padding:12px 20px;border:0;font:inherit;font-size:14px;font-weight:600;cursor:pointer;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <sc-if value="{{ isCon }}" hint-placeholder-val="{{ true }}">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+          <div style="background:#f5f2ec;padding:30px;display:flex;flex-direction:column;gap:14px;border-radius:2px">
+            <div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:600;color:#5b6573;flex-wrap:wrap">
+              <span style="color:#b4532a">{{ p.type }}</span><span style="font-variant-numeric:tabular-nums">{{ p.period }}</span>
+            </div>
+            <h3 style="margin:0;font-size:21px;font-weight:700;letter-spacing:-0.02em">{{ p.client }}</h3>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="2">
+                <div style="display:flex;gap:10px;font-size:15px;line-height:1.65;color:#4a5462"><span style="color:#b4532a">·</span><span style="text-wrap:pretty">{{ it }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isEdu }}" hint-placeholder-val="{{ false }}">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px">
+        <div style="background:#16202e;color:#f5f2ec;padding:32px;display:flex;flex-direction:column;gap:18px;border-radius:2px">
+          <span style="font-size:13px;font-weight:600;letter-spacing:0.08em;color:#e08a5f">KSA 정규 교육</span>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ ksaCourses }}" as="k" hint-placeholder-count="5">
+              <div style="font-size:17px;font-weight:600;padding-bottom:12px;border-bottom:1px solid #2c3a4d">{{ k }}</div>
+            </sc-for>
+          </div>
+        </div>
+        <sc-for list="{{ sites }}" as="g" hint-placeholder-count="3">
+          <div style="background:#f5f2ec;padding:32px;display:flex;flex-direction:column;gap:16px;border-radius:2px">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:13px;font-weight:600;letter-spacing:0.08em;color:#b4532a">{{ g.title }}</span>
+              <span style="font-size:14px;color:#5b6573">{{ g.note }}</span>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ g.list }}" as="s" hint-placeholder-count="5">
+                <span style="font-size:14px;font-weight:500;padding:6px 12px;background:#ebe5da;border-radius:2px">{{ s }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isTalk }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;border-top:2px solid #16202e">
+        <sc-for list="{{ talks }}" as="t" hint-placeholder-count="6">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px 24px;padding:20px 0;border-bottom:1px solid #cfc6b6;align-items:baseline">
+            <span style="font-size:15px;font-weight:700">{{ t.org }}</span>
+            <span style="font-family:'Noto Serif KR',serif;font-size:17px;font-weight:500;grid-column:span 1;text-wrap:pretty">“{{ t.title }}”</span>
+            <span style="font-size:14px;color:#5b6573">{{ t.note }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<section id="career" style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(48px,6vw,80px)">
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#b4532a">04 — CAREER</span>
+      <h2 style="margin:0;font-family:'Noto Serif KR',serif;font-weight:700;font-size:clamp(28px,3.4vw,40px);letter-spacing:-0.02em">주요 경력</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;border-top:2px solid #16202e">
+      <sc-for list="{{ career }}" as="c" hint-placeholder-count="3">
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid #ddd6ca">
+          <span style="font-size:14px;font-weight:600;color:#5b6573;font-variant-numeric:tabular-nums">{{ c.period }}</span>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <span style="font-size:16px;font-weight:700">{{ c.org }}</span>
+            <span style="font-size:14px;color:#5b6573;line-height:1.6">{{ c.role }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:12px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:0.08em;color:#5b6573">평가·심사 및 개발 활동</span>
+      <sc-for list="{{ activities }}" as="a" hint-placeholder-count="4">
+        <div style="display:flex;gap:10px;font-size:15px;line-height:1.65;color:#3b4554"><span style="color:#b4532a">·</span><span>{{ a }}</span></div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#b4532a">05 — CREDENTIALS</span>
+      <h2 style="margin:0;font-family:'Noto Serif KR',serif;font-weight:700;font-size:clamp(28px,3.4vw,40px);letter-spacing:-0.02em">학력 및 자격</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;border-top:2px solid #16202e">
+      <sc-for list="{{ creds }}" as="c" hint-placeholder-count="6">
+        <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid #ddd6ca;flex-wrap:wrap">
+          <span style="font-size:16px;font-weight:600">{{ c.name }}</span>
+          <span style="font-size:14px;color:#5b6573">{{ c.note }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:12px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:0.08em;color:#5b6573">기고</span>
+      <div style="padding:24px;background:#ebe5da;display:flex;flex-direction:column;gap:10px;border-radius:2px">
+        <span style="font-size:13px;color:#5b6573">품질경영지 연재 등</span>
+        <span style="font-family:'Noto Serif KR',serif;font-size:17px;font-weight:700;line-height:1.5">“조직이든 개인이든 창조성이 살길이다.” <span style="font-family:Pretendard Variable,sans-serif;font-size:14px;font-weight:500;color:#5b6573">(2014)</span></span>
+        <span style="font-family:'Noto Serif KR',serif;font-size:17px;font-weight:700;line-height:1.5">“식스시그마 리더가 알아야 할 단계별 접근방법 및 노하우”</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="clients" style="border-top:1px solid #ddd6ca;border-bottom:1px solid #ddd6ca">
+  <div style="max-width:1200px;margin:0 auto;padding:48px 24px;display:flex;align-items:center;gap:20px 40px;flex-wrap:wrap">
+    <span style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#5b6573">주요 수행 기관</span>
+    <div style="display:flex;gap:12px 32px;flex-wrap:wrap;flex:1;font-size:16px;font-weight:600;color:#3b4554">
+      <sc-for list="{{ clients }}" as="c" hint-placeholder-count="10"><span>{{ c }}</span></sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(40px,6vw,80px)">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#b4532a">06 — CONTACT</span>
+    <h2 style="margin:0;font-family:'Noto Serif KR',serif;font-weight:700;font-size:clamp(30px,4vw,48px);line-height:1.3;letter-spacing:-0.02em;text-wrap:balance">조직의 과제를<br>함께 이야기해 주세요.</h2>
+    <p style="margin:0;font-size:16px;line-height:1.8;color:#4a5462;max-width:440px">6시그마 인력 양성, 품질개선·생산성 향상 지도, 분임조 지도, 특강 등 무엇이든 편하게 문의해 주시면 검토 후 회신드리겠습니다.</p>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:12px;font-size:16px">
+      <div style="display:grid;grid-template-columns:72px 1fr;gap:12px"><span style="color:#5b6573">이메일</span><a href="mailto:yhpark@ksa.or.kr" style="font-weight:600">yhpark@ksa.or.kr</a></div>
+      <div style="display:grid;grid-template-columns:72px 1fr;gap:12px"><span style="color:#5b6573">전화</span><a href="tel:010-5382-5726" style="font-weight:600">010-5382-5726</a></div>
+      <div style="display:grid;grid-template-columns:72px 1fr;gap:12px"><span style="color:#5b6573">소속</span><span style="font-weight:600">한국표준협회 품질신뢰성혁신센터</span></div>
+    </div>
+    <img src="assets/ksa-logo.png" alt="한국표준협회" style="width:180px;height:auto;margin-top:16px">
+  </div>
+</section>
+
+<footer style="background:#16202e;color:#8e98a6">
+  <div style="max-width:1200px;margin:0 auto;padding:32px 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px">
+    <span>© 2026 박웅희 · 한국표준협회 품질신뢰성혁신센터 수석전문위원</span>
+    <a href="#top" style="color:#c9cfd8">맨 위로 ↑</a>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPhoto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#16202e&quot;,&quot;options&quot;:[&quot;#16202e&quot;,&quot;#b4532a&quot;,&quot;#2f4a3a&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { tab: 'con', sent: false, topic: '교육' };
+  renderVals() {
+    const { tab, sent, topic } = this.state;
+    const accent = this.props.accent ?? '#16202e';
+    return {
+      showPhoto: this.props.showPhoto ?? true,
+      isCon: tab === 'con', isEdu: tab === 'edu', isTalk: tab === 'talk',
+      tabs: [['con', '컨설팅 실적'], ['edu', '교육·지도'], ['talk', '특강']].map(([k, l]) => ({
+        label: l, bg: tab === k ? accent : 'transparent', fg: tab === k ? '#f5f2ec' : '#16202e',
+        pick: () => this.setState({ tab: k })
+      })),
+      sent, notSent: !sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false }),
+      topics: ['교육', '컨설팅', '분임조 지도', '특강'].map(l => ({
+        label: l, bg: topic === l ? '#b4532a' : 'transparent', border: topic === l ? '#b4532a' : '#5b6573',
+        pick: () => this.setState({ topic: l })
+      })),
+      expertise: [
+        { no: '01', title: '6시그마', desc: 'MBB·BB·GB 인력 양성과 인증, DMAIC·DFSS 교육 및 과제 지도를 수행합니다.', tags: ['MBB/BB/GB', 'DMAIC', 'DFSS', '린6시그마'] },
+        { no: '02', title: '통계적 품질관리', desc: '확률과 통계를 바탕으로 공정을 관리하고, 실험계획법으로 최적 조건을 찾습니다.', tags: ['SPC', 'SQC', '실험계획법(DOE)'] },
+        { no: '03', title: '품질분임조', desc: '분임조 문제해결기법 교육과 현장 지도, 경진대회 심사를 수행합니다.', tags: ['문제해결기법', '분임조 지도', '심사'] },
+        { no: '04', title: '창의적 문제해결', desc: '창의적인 문제해결 프로그램을 개발했고, 창의력 개발과 변화관리 특강을 진행합니다.', tags: ['창의력 개발', '변화관리', '품질마인드'] },
+        { no: '05', title: '정부지원사업', desc: '일터혁신, 혁신파트너십 등 정부지원사업을 통해 중소·중견기업의 혁신을 지원합니다.', tags: ['일터혁신', '혁신파트너십'] }
+      ],
+      projects: [
+        { type: '컨설팅', period: '2012.04 – 2020.12', client: '국방부 린6시그마사업', items: ['군사령부·군단급 부대 지휘관 대상 변화관리 교육 및 과제 발굴', 'MBB·BB·GB·사내강사 교육, 과제 지도 (사단급 군수지원 프로세스 개선으로 지원시간 단축 등)'] },
+        { type: '인력 양성', period: '2014.08 – 현재', client: '에스엘 MBB·BB 양성', items: ['MBB·BB 후보 대상 DMAIC, DFSS 교육', '세미나, 확률과 통계·실험계획법·공정관리 교육'] },
+        { type: '인력 양성', period: '2024.05 – 2024.07', client: 'LS일렉트릭 BB·GB 양성', items: ['중간관리자 대상 인력 선발, 교육, 인증시험'] },
+        { type: '인력 양성', period: '2016.02 – 2017.11', client: 'LG이노텍 MBB 양성', items: ['핵심인력·팀장급 대상 인력 선발, 교육', '과제 지도, 인증시험 문제 출제, 인증 심사'] },
+        { type: '컨설팅', period: '2016.03 – 2018.12', client: '아이센스 품질혁신활동', items: ['본사 및 3개 공장(서울·원주·송도) 대상 6시그마 교육', '과제 발굴, 사업장별 순회 컨설팅 및 과제 평가'] },
+        { type: '컨설팅', period: '2017.04 – 2018.12', client: '세코닉스 품질개선·생산성 향상', items: ['문제해결방법론, 확률과 통계, 공정관리 교육', '생산공정별 핵심과제 발굴 및 컨설팅'] }
+      ],
+      ksaCourses: ['품질관리담당자 양성', '6시그마 개선전문가 (WB · GB · BB · MBB)', '품질분임조 문제해결기법', '통계적품질관리 (SQC)', '통계적공정관리 (SPC)'],
+      sites: [
+        { title: '품질부문 지도', note: '5S 활동, 품질개선 및 생산성 향상', list: ['청호나이스 (25)', '오뚜기제유 (24~)', '한스바이오메드 (23~)', '에코트로닉스 (25~)', '옵트론텍 (20·21)', '우진엔텍 (21)', '대양의료기 (19)'] },
+        { title: '분임조 지도', note: '품질분임조 활동 및 발표 지도', list: ['스템코 (25)', '콜마비앤에이치 (25~)', '한스바이오메드 (23~)', '한국전력', '발전자회사 다수', 'LG화학', '철도시설공단'] },
+        { title: '기타 교육 및 지도', note: '통계·현장개선·품질 교육', list: ['종이나라 (26)', '휴메딕스 (25)', '대양전기 (23)', '현대엘리베이터 (23)', '조폐공사 (21)', '현대모비스 (18)', '오토닉스 (18)', '한샘 (18)', 'SK하이닉스 (18)', '서울우유 (18)', '한국타이어 (16)', 'LS엠트론 (14~15)'] }
+      ],
+      talks: [
+        { org: '최고경영자 세미나', title: '품질수준의 차이는 어디서', note: '2015' },
+        { org: '만도', title: '기본과 원칙 준수가 일류를 만든다', note: '2014 · 협력사 대표 대상' },
+        { org: '에스엘', title: 'KPC/KCC 관리체계 구축', note: '2018 · 임원 대상' },
+        { org: 'SDI', title: '창의적인 문제해결 역량 강화', note: '2018' },
+        { org: '하만코리아', title: '외부 품질 환경 변화에 따른 품질 개념과 의식의 전환', note: '2018' },
+        { org: '산림청', title: '기업에서의 품질관리방법', note: '2018' },
+        { org: '오토닉스 · 세방전지 · YG-1', title: '품질마인드 향상', note: '2015 – 2019' }
+      ],
+      career: [
+        { period: '2006.01 – 현재', org: '한국표준협회 품질신뢰성혁신센터', role: '전문위원 · 수석전문위원' },
+        { period: '1997.04 – 2006.01', org: '삼성전자 본사 경영혁신팀', role: '혁신기획, 6시그마, 사무혁신' },
+        { period: '1988.08 – 1997.03', org: '삼성전자 사업부', role: '개발, 필드 엔지니어, 세일즈 엔지니어' }
+      ],
+      activities: [
+        '해양경찰청 국책과제 평가위원 및 책임운영기관 평가위원',
+        '지역 및 전국 품질분임조 경진대회 심사위원',
+        '창의적인 문제해결 프로그램 개발',
+        '공공부문 BB/GB, 알기쉬운 6시그마, 삼성전자 BB 교재 개발'
+      ],
+      creds: [
+        { name: '인하대학교 전자공학 학사', note: '학력' },
+        { name: '6시그마 MBB', note: '삼성전자 인증' },
+        { name: 'CQE', note: 'Certified Quality Engineer' },
+        { name: 'ISO 45001 심사원', note: '안전보건경영시스템' },
+        { name: '전자기사 1급', note: '국가기술자격' },
+        { name: '인공지능 자격', note: '전문가' }
+      ],
+      clients: ['국방부', '해양경찰청', '한국전력', 'LG이노텍', 'LG화학', 'LS일렉트릭', '에스엘', '현대모비스', 'SK하이닉스', '아이센스', '세코닉스', '한샘', '조폐공사', '철도시설공단']
+    };
+  }
+}
+</script>
+</body>
+</html>
